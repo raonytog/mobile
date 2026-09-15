@@ -16,12 +16,26 @@
         app:layout_constraintTop_toTopOf="parent">
     </ImageView>
 
+    <TextView
+        android:id="@+id/text_view_info_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informações de Login"
+        app:layout_constraintBottom_toTopOf="@id/edittext_username"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp">
+    </TextView>
+
     <EditText
         android:id="@+id/edittext_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/gray"
+        android:drawableLeft="@drawable/add"
         android:padding="5dp"
+        android:drawablePadding="5dp"
         android:text="Nome do usuário"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,6 +48,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/gray"
+        android:drawableLeft="@drawable/android"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/visible"
         android:layout_marginTop="10dp"
         android:padding="5dp"
         android:text="Senha"
@@ -66,16 +83,67 @@
     </TextView>
 
     <TextView
+        android:id="@+id/textivew_acesso_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acesso por código"
+        app:layout_constraintTop_toBottomOf="@+id/text_recover_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edittext_codigo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Código"
+        app:layout_constraintTop_toBottomOf="@id/textivew_acesso_codigo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="">
+    </EditText>
+
+    <Button
+        android:id="@+id/enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="0dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/edittext_codigo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textivew_acesso_codigo"
+        android:text="Enviar">
+    </Button>
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="0dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/edittext_password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </Button>
+
+    <TextView
         android:id="@+id/text_alternative_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ou faça login com"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/button_join"
+        app:layout_constraintTop_toBottomOf="@id/edittext_codigo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.35">
+>
     </TextView>
 
     <ImageButton
@@ -113,6 +181,17 @@
     </ImageButton>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não tem conta?"
+        android:textColorHint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/clique_aqui">
+    </TextView>
+
+    <TextView
+        android:id="@+id/clique_aqui"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ou clique aqui para se cadastrar"
